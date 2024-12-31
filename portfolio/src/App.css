@@ -1,0 +1,479 @@
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+body{
+    background-color: #FFDB67;
+    font-family: "Poppins";
+}
+
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+.nav-bar{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar a {
+    text-decoration: none;
+}
+.nav-bar li a {
+    color: black;
+}
+.nav-bar li a:hover{
+    color: white;
+}
+.nav-item{
+    position: relative;
+}
+.nav-item::after{
+    content: "";
+    position:absolute;
+    width: 0;
+    height:3px;
+    background-color: #FB4141;
+    left: 0;
+    bottom: -3px;
+    border-radius: 2px;
+    transition-duration: 0.4s;
+}
+
+.nav-item:hover::after{
+    width: 100%;
+}
+
+
+/* home */
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    gap: 10rem;
+    margin-top: 20px;
+}
+#text-1{
+    font-size: 44px;
+    padding: 0;
+    margin: 0;
+}
+#text-2{
+    max-width: 700px;
+    padding: 0;
+    margin: 0;
+}
+
+.profile img{
+    width: 250px;
+    height:250px;
+    border-radius: 50%;
+}
+
+
+.button{
+    width: 102px;
+    height: 44px;
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-right: 5px;
+    font-size: 14px;
+    transition-duration: .23s;
+}
+
+.button-shadow{
+    box-shadow: 2px 2px black;
+}
+
+.button:hover{
+    box-shadow: 0 0;
+}
+
+
+
+
+
+/* about */
+.about{
+    
+    height: 90vh;
+}
+.header{
+    display: flex;
+    gap: 1rem;
+    padding: 10px;
+    
+}
+.line{
+    height: 125px;
+    width: 3px;
+    background-color: black;
+}
+.headers{
+    position: relative;
+}
+.invisible-text{
+
+    font-size: 54px;
+    font-weight: 600;
+    padding:0;
+    margin:0;
+    opacity: 15%;
+}
+.sub-words{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    bottom: 40px;
+    left: 15px;
+}
+.words{
+    padding: 0;
+    margin: 0;
+    font-size: 34px;
+    font-weight: bold;
+    position: relative;
+    bottom: 40px;
+    left: 15px;
+}
+
+.title-content{
+    padding: 0 20px;
+    overflow: auto;
+    height: 40vh;
+}
+
+.title{
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.content{
+    padding: 0;
+    margin-top: 5px;
+}
+.title::after{
+    content:"";
+    width: 40px;
+    height: 35px;
+    background-color: #FB4141;
+    position: absolute;
+    z-index: -1;
+    left: 150px;
+    border-radius: 10px;
+    transition: 1s all ease;
+}
+.title:hover::after{
+    animation-name: motion-bar ;
+    animation-duration: 2s;
+    
+}
+
+@keyframes motion-bar {
+    0%{
+        transform: translateX(-150px);
+    }
+    20%{
+        width: 50px;
+        height: 3px;
+    }
+    40%{
+        transform: translateX(120px);
+    }
+    60%{
+        border-radius: 50%;
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+.skillcard {
+    margin-top: 5px;
+    width: 250px;
+    height: 220px;
+    background-color: rgb(226, 224, 224);
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; 
+}
+
+.skillcard:hover {
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3), 0 10px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+}
+
+.skillcard-title{
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    left: 20px;
+    top: 20px;
+}
+.skillcard-title::after{
+    content: "";
+    width: 40px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    top: 25px;
+    left: 3px;
+    border-radius: 2px;
+}
+
+.skill{
+    width: auto;
+    height: auto;
+    background-color: #FB4141;
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+    padding: 5px;
+}
+.skills{
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.skillcard-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+.service{
+    height: 100vh;
+}
+
+.cards-container{
+    display: flex;
+}
+
+.service-head{
+     display: flex;
+     justify-content: center;   
+}
+
+
+
+
+
+.Projectcard-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 50px 0;
+}
+
+.Projectcard {
+    flex: 1 1 calc(45% - 30px);  /* Ensures 2 cards per row */
+    max-width: 320px;
+    background: linear-gradient(135deg, #ffffff, #f7f7f7);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Projectcard:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.Projectcard img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-bottom: 3px solid #eaeaea;
+}
+
+.Projectcard h3 {
+    font-size: 1.4rem;
+    margin: 20px 15px 10px;
+    color: #222;
+}
+
+.Projectcard p {
+    margin: 10px 15px 20px;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.projectcard-button {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.projectcard-button button {
+    width: 90px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.projectcard-button #button1 {
+    background-color: rgb(30, 169, 74);
+    color: white;
+}
+
+.projectcard-button #button1:hover {
+    background-color: rgb(25, 140, 60);
+    transform: scale(1.05);
+}
+
+.projectcard-button #button2 {
+    background-color: transparent;
+    border: 2px solid blue;
+    color: blue;
+}
+
+.projectcard-button #button2:hover {
+    background-color: blue;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+.Servicecard-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px 0;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.Servicecard {
+    width: 300px;
+    padding: 25px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #ffffff, #f4f4f4);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.Servicecard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.Servicecard h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+.Servicecard ul {
+    list-style: none;
+    padding: 0;
+}
+
+.Servicecard li {
+    font-size: 1rem;
+    margin: 10px 0;
+    padding: 8px 15px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    text-align: center;
+    color: #555;
+}
+
+
+.workflow-container {
+    height:90vh;
+}
+
+.process-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; /* Ensures vertical centering of circles */
+    padding: 20px;
+    height: 50%;
+    flex-wrap: wrap;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+}
+.circle p{
+    position: relative;
+    top: 35px;
+}
+
+.circle:hover{
+    background-color:#FB4141;
+    color: white;
+}
+@media (max-width: 768px) {
+    .collaps {
+        display: none;
+    }
+    .navbar-container{
+        justify-content: center;
+    }
+    .home{
+        flex-direction: column-reverse;   
+        gap: 30px;
+        align-items: center;
+    }
+    #text-1{
+        font-size: 28px;
+        padding: 0;
+        margin: 0;
+    }
+    #text-2{
+        padding: 0;
+        margin: 0;
+    }
+    
+    .profile img{
+        width: 180px;
+        height:180px;
+    }
+    .Projectcard-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .process-container {
+        flex-direction: column;
+    }
+    .circle{
+        width: 100px;
+        height: 100px;
+    }
+    .circle p{
+        top: 25px;
+    }
+    .circle:nth-child(even){
+        align-self: none;
+    }
+    
+}
